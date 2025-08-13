@@ -22,5 +22,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("edu.curso.Main") // Replace with your main class
+    mainClass.set("edu.curso.MainKt") // Replace with your main class
 }
