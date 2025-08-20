@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" version="28.1.0">
+  <diagram name="Página-1" id="cN1ZYUtJyTfc42eTsxrr">
+    <mxGraphModel dx="1830" dy="994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-2" target="bxpkJsg6kBzWfBhUSXEz-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="371" />
+              <mxPoint x="140" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-2" target="bxpkJsg6kBzWfBhUSXEz-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="370" />
+              <mxPoint x="140" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-2" value="Usuário" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="20" y="332" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-5" target="bxpkJsg6kBzWfBhUSXEz-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-20" value="Request/Response HTTP:8080" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bxpkJsg6kBzWfBhUSXEz-17">
+          <mxGeometry x="0.1412" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-5" value="App Mobile Kotlin&amp;nbsp;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;KMP&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;div&gt;ou React Native&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mobile_client;fillColor=#D2D3D3;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="30" width="100" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-7" target="bxpkJsg6kBzWfBhUSXEz-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-21" value="Request/Response HTTP:8080" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bxpkJsg6kBzWfBhUSXEz-18">
+          <mxGeometry x="-0.2812" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-7" value="App Desktop Kotlin KMP&amp;nbsp;ou JavaFX&amp;nbsp;&lt;div&gt;ou Python com Kivy&lt;/div&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Managed_Desktop.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="326" width="111.11" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.554;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-2" target="bxpkJsg6kBzWfBhUSXEz-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-11" value="Web Application Koltin KMP ou React JS" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/WHCompare_Isometric_Web_Hosting___Servers-2190/browser-window-with-stats-606.svg" vertex="1" parent="1">
+          <mxGeometry x="190" y="530" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-34" value="Assinar o Broker no&amp;nbsp;&lt;div&gt;Tópico/Fila esepecifico&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-16" target="bxpkJsg6kBzWfBhUSXEz-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="368" />
+              <mxPoint x="770" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-16" value="Servidor Backend&lt;div&gt;Kotlin com Spring Boot&lt;/div&gt;" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="540" y="277" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.664;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-11" target="bxpkJsg6kBzWfBhUSXEz-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-22" value="Request/Response HTTP:8080" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bxpkJsg6kBzWfBhUSXEz-19">
+          <mxGeometry x="0.0491" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-23" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Database&lt;/div&gt;&lt;div&gt;Mysql&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="890" y="327" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-16" target="bxpkJsg6kBzWfBhUSXEz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-26" value="JDBC:3306" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bxpkJsg6kBzWfBhUSXEz-25">
+          <mxGeometry x="-0.3571" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-33" value="Postar informações no&amp;nbsp;&lt;div&gt;Tópico/Fila&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;especifico usando&amp;nbsp;&lt;/span&gt;&lt;div&gt;protocolo MQTT:1883&lt;/div&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-27" target="bxpkJsg6kBzWfBhUSXEz-32">
+          <mxGeometry x="0.3124" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-27" value="ESP 32 feito&amp;nbsp;&lt;div&gt;com linguagem C++&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Electronic_Line-2454/3-electronic-arduino-chipset-icon-2-1297.svg" vertex="1" parent="1">
+          <mxGeometry x="1010" y="660" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bxpkJsg6kBzWfBhUSXEz-28" target="bxpkJsg6kBzWfBhUSXEz-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-28" value="Sensor&amp;nbsp;&lt;div&gt;Temperatura/Umidade&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.iot_thing_temperature_vibration_sensor;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="750" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="bxpkJsg6kBzWfBhUSXEz-32" value="Broker Mosquitto MQTT" style="image;html=1;image=img/lib/clip_art/networking/Print_Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="820" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
