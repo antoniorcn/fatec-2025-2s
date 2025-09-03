@@ -7,7 +7,7 @@ plugins {
 
 group = "edu.curso"
 version = "0.0.1-SNAPSHOT"
-description = "Agenda de contato com Spring Boot e Koltin"
+description = "Agenda de contato com Spring Boot e Kotlin"
 
 java {
 	toolchain {
@@ -25,8 +25,12 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+	// Dependencia do JDBC e JPA
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+
+	// Dependencia de Validação
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

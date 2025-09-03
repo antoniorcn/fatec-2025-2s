@@ -2,6 +2,7 @@ package edu.curso.agenda.controller
 
 import edu.curso.agenda.model.Contato
 import edu.curso.agenda.service.ContatoService
+import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
@@ -19,7 +20,7 @@ class ContatoController(val service : ContatoService) {
     }
 
     @PostMapping
-    fun adicionarContato( @RequestBody contato : Contato ) :
+    fun adicionarContato( @RequestBody @Valid contato : Contato ) :
             ResponseEntity<String> {
         service.adicionar( contato )
         return ResponseEntity.ok("Contato gravado com sucesso")
@@ -34,7 +35,7 @@ class ContatoController(val service : ContatoService) {
 
     @PutMapping("/{id}")
     fun atualizarContato(@PathVariable("id") id : Int,
-                         @RequestBody contato : Contato) :
+                         @RequestBody @Valid contato : Contato) :
             ResponseEntity<String> {
         service.atualizar( id, contato )
         return ResponseEntity.ok("Contato atualizado com sucesso")
