@@ -3,7 +3,6 @@ package edu.curso.agenda.controller
 import edu.curso.agenda.dto.CompromissoDTO
 import edu.curso.agenda.dto.CompromissoViewDTO
 import edu.curso.agenda.mapper.CompromissoMapper
-import edu.curso.agenda.model.Compromisso
 import edu.curso.agenda.service.CompromissoService
 import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
