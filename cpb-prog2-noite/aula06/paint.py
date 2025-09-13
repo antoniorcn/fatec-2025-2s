@@ -58,3 +58,5 @@ while rodando:
             print(evento)
 
 print("Fim do jogo")
+
+# https://fatecspgov-my.sharepoint.com/:f:/g/personal/antonio_carvalho_fatec_sp_gov_br/EvuKrsiVLKdGuOPiX2u3jgMBTiH6vEKKMDJtV5RlwFDW_g
