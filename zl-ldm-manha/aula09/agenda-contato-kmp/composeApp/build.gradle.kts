@@ -9,10 +9,9 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
     alias(libs.plugins.kotlin.serialization)
-//    // ksp
-//    id("com.google.devtools.ksp")
-//    // room
-//    alias(libs.plugins.androidx.room)
+
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.androidx.room)
 }
 
 kotlin {
@@ -22,9 +21,9 @@ kotlin {
         }
     }
 
-//    room {
-//        schemaDirectory("$projectDir/schemas")
-//    }
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
 
     
     jvm()
@@ -45,6 +44,8 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.android)
+
+            implementation(libs.androidx.room.sqlite.wrapper)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -60,8 +61,8 @@ kotlin {
             implementation(libs.material.icons.extended)
 
 //            // room
-//            implementation(libs.room.runtime)
-//            implementation(libs.room.ktx)
+            implementation(libs.androidx.room.runtime)
+            implementation(libs.androidx.sqlite.bundled)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -103,6 +104,7 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    add("kspAndroid", libs.androidx.room.compiler)
 }
 
 compose.desktop {

@@ -18,8 +18,9 @@ navigation = "2.9.0"
 material-icons-extended = "1.7.3"
 ktor = "3.3.0"
 coroutines = "1.9.0"
-#roomVersion = "2.7.1"
-#ksp = "2.2.10-2.0.2"
+room = "2.8.1"
+sqlite = "2.6.0"
+ksp = "2.2.20-2.0.3"
 
 
 [libraries]
@@ -47,9 +48,13 @@ ktor-client-cio = { group = "io.ktor", name="ktor-client-cio", version.ref = "kt
 ktor-serialization-json = { group = "io.ktor", name="ktor-serialization-kotlinx-json", version.ref = "ktor"}
 
 # Bibliotecas do Room
-#room-runtime = { group="androidx.room", name="room-runtime", version.ref="roomVersion"}
-#room-compiler = { group="androidx.room", name="room-compiler", version.ref="roomVersion"}
-#room-ktx = {group="androidx.room", name="room-ktx", version.ref="roomVersion"}
+androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# Optional SQLite Wrapper available in version 2.8.0 and higher
+androidx-room-sqlite-wrapper = { module = "androidx.room:room-sqlite-wrapper", version.ref = "room" }
+
 
 
 [bundles]
@@ -67,6 +72,6 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref="kotlin"}
 
 ## KSP
-#google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ## Room
-#androidx-room = { id = "androidx.room", version.ref="roomVersion"}
+androidx-room = { id = "androidx.room", version.ref="room"}
