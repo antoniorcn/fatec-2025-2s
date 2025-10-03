@@ -1,0 +1,1 @@
+curl --request PUT --header "Content-Type: application/json" --data "{\"id\": null, \"nome\": \"Jose Santos\", \"telefone\": \"(12) 4444-4444\", \"email\": \"jose@teste.com\"}" http://localhost:8080/contato/7

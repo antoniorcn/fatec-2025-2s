@@ -1,0 +1,1 @@
+curl --request DELETE http://localhost:8080/contato/6
