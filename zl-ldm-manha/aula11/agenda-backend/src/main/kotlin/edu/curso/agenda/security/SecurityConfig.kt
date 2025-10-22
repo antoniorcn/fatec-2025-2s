@@ -8,11 +8,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.security.web.SecurityFilterChain
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
 
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-class SecurityConfig {
+class SecurityConfig(
+    val jwtAuthFilter : JwtAuthFilter
+) {
 
     @Bean
     fun getPasswordEncoder() : PasswordEncoder {
@@ -35,6 +38,8 @@ class SecurityConfig {
             .sessionManagement {
                 it.disable()
             }
+            .addFilterBefore( jwtAuthFilter,
+                        UsernamePasswordAuthenticationFilter::class.java )
 
         return http.build()
     }

@@ -19,11 +19,11 @@ class CompromissoService(val repository : CompromissoRepositoryInDB) {
         repository.save( compromisso )
     }
 
-    fun remover(id : Int) {
+    fun remover(id : Long) {
         repository.deleteById( id )
     }
 
-    fun atualizar(id : Int, compromisso : Compromisso) {
+    fun atualizar(id : Long, compromisso : Compromisso) {
         val compromissoCopia = compromisso.copy(id = id)
         repository.save( compromissoCopia )
     }

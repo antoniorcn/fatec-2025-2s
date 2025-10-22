@@ -17,7 +17,7 @@ data class Contato(
     @TableGenerator(name="contato-generator", table="id_sequences",
         pkColumnName = "seq_id",
         valueColumnName = "seq_value")
-    var id : Int?,
+    var id : Long?,
     @Column(length = 100)
     @field:NotEmpty()
     @field:Size(min=5, max=100)

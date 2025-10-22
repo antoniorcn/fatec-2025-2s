@@ -32,14 +32,14 @@ class CompromissoController(val service : CompromissoService,
     }
 
     @DeleteMapping("/{id}")
-    fun removerCompromisso(@PathVariable("id") id : Int) :
+    fun removerCompromisso(@PathVariable("id") id : Long) :
             ResponseEntity<String> {
         service.remover( id )
         return ResponseEntity.ok("Compromisso removido com sucesso")
     }
 
     @PutMapping("/{id}")
-    fun atualizarCompromisso(@PathVariable("id") id : Int,
+    fun atualizarCompromisso(@PathVariable("id") id : Long,
                          @RequestBody @Valid compromissoDto : CompromissoDTO) :
             ResponseEntity<String> {
         val compromisso = compromissoMapper.fromDTO( compromissoDto )

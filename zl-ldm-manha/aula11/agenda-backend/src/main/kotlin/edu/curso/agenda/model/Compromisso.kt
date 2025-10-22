@@ -16,7 +16,7 @@ data class Compromisso(
         table="id_sequences",
         pkColumnName = "seq_id",
         valueColumnName = "seq_value")
-    var id : Int?,
+    var id : Long?,
     @Column(length = 50)
     @field:NotEmpty()
     @field:Size(min=5, max=50)

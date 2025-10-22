@@ -6,6 +6,8 @@ import edu.curso.agenda.model.Usuario
 import edu.curso.agenda.security.JwtUtils
 import edu.curso.agenda.service.UsuarioService
 import jakarta.validation.Valid
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatusCode
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -18,6 +20,8 @@ class UsuarioController(
     val service : UsuarioService,
     val passwordEncoder : PasswordEncoder
 ) {
+
+    val logger : Logger = LoggerFactory.getLogger(UsuarioController::class.java)
 
     @PostMapping("/signin")
     fun signin(@RequestBody @Valid usuario : UsuarioDTO) : ResponseEntity<String> {

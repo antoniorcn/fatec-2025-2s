@@ -1,5 +1,6 @@
 package edu.curso.agenda.security
 
+import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.io.Decoders
 import io.jsonwebtoken.security.Keys
@@ -13,6 +14,27 @@ class JwtUtils {
     fun getSignKey() : Key {
         val base64 = Decoders.BASE64.decode(SECRET_KEY )
         return Keys.hmacShaKeyFor(base64 )
+    }
+
+    private fun extractAllClaims(token: String): Claims {
+        return Jwts.parser()
+            .setSigningKey(getSignKey())
+            .build()
+            .parseClaimsJws(token)
+            .body
+    }
+
+    fun isTokenExpired( claims: Claims ) : Boolean {
+        return claims.expiration.time < Date().time
+    }
+
+    fun validateToken( token : String ) : String? {
+        val claims = extractAllClaims( token )
+        if (! isTokenExpired( claims )) {
+            return claims.subject
+        } else {
+            return null
+        }
     }
 
     fun createToken(email : String, perfil : String) : String {

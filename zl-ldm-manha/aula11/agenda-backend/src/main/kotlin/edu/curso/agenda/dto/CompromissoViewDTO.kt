@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 
 @JsonIdentityInfo(property = "id", generator = ObjectIdGenerators.PropertyGenerator::class)
 data class CompromissoViewDTO(
-    var id : Int?,
+    var id : Long?,
     @field:NotEmpty()
     @field:Size(min=5, max=50)
     var titulo : String,

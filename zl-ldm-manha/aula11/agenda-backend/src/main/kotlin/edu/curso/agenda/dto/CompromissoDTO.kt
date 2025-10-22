@@ -9,7 +9,7 @@ import java.time.LocalDateTime
 
 @JsonIdentityInfo(property = "id", generator = ObjectIdGenerators.PropertyGenerator::class)
 data class CompromissoDTO(
-    var id : Int?,
+    var id : Long?,
     @field:NotEmpty()
     @field:Size(min=5, max=50)
     var titulo : String,
@@ -27,7 +27,7 @@ data class CompromissoDTO(
     @field:NotEmpty()
     var tipo : String,
 
-    var contato : Int
+    var contato : Long
 
 ) {
     constructor() : this(null, "", null,

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
 
 
-interface ContatoRepositoryInDB : JpaRepository<Contato, Int?> {
+interface ContatoRepositoryInDB : JpaRepository<Contato, Long?> {
 
     @Query("Select c From Contato c Where c.nome Like %:nome%")
     fun consultarPorNome(@Param("nome") nome : String) : List<Contato>

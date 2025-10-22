@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
 
 
-interface CompromissoRepositoryInDB : JpaRepository<Compromisso, Int?> {
+interface CompromissoRepositoryInDB : JpaRepository<Compromisso, Long?> {
 
     @Query("Select c From Compromisso c Where c.titulo Like %:titulo%")
     fun consultarPorTitulo(@Param("titulo") titulo : String) : List<Compromisso>

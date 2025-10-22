@@ -33,7 +33,7 @@ class ContatoService(val repository : ContatoRepositoryInDB) {
         }
     }
 
-    fun remover(id : Int) {
+    fun remover(id : Long) {
         try {
             repository.deleteById( id )
         } catch (e: Exception) {
@@ -41,7 +41,7 @@ class ContatoService(val repository : ContatoRepositoryInDB) {
         }
     }
 
-    fun atualizar(id : Int, contato : Contato) {
+    fun atualizar(id : Long, contato : Contato) {
         try {
             val contatoCopia = contato.copy(id = id)
             repository.save( contatoCopia )
@@ -50,7 +50,7 @@ class ContatoService(val repository : ContatoRepositoryInDB) {
         }
     }
 
-    fun localizarPorId( id : Int ) : Optional<Contato> {
+    fun localizarPorId( id : Long ) : Optional<Contato> {
         try {
             return repository.findById( id )
         } catch (e: Exception) {
