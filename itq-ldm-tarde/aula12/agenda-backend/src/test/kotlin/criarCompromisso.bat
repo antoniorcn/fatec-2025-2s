@@ -1,0 +1,1 @@
+curl --request POST --header "Content-Type: application/json" --data "{\"id\": null, \"titulo\": \"Estudar LDM\", \"descricao\": \"Estudar bastante para a disciplina de LDM\", \"inicio\": \"2025-09-12 17:00:00\", \"termino\": \"2025-09-12 20:00:00\", \"local\": \"Online\", \"tipo\": \"Desenvolvimento\", \"contato\": 2}" http://localhost:8080/compromisso

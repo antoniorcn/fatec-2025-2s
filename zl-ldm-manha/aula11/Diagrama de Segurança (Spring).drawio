@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.7">
+  <diagram name="Página-1" id="4PLm4yuQ6MWLN8xrNzPr">
+    <mxGraphModel dx="1134" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-2" value="Spring Boot Server" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
+          <mxGeometry x="630" y="90" width="100" height="178.57" as="geometry" />
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-3" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="130" width="100" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.012;exitY=0.463;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="1UTrnUIsV_9sJApoUBW6-3" target="1UTrnUIsV_9sJApoUBW6-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="310" as="sourcePoint" />
+            <mxPoint x="490" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-5" value="Http Request /signin&lt;div&gt;email: antonio@teste.com&lt;/div&gt;&lt;div&gt;senha: 123456&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.989;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1UTrnUIsV_9sJApoUBW6-1" target="1UTrnUIsV_9sJApoUBW6-2">
+          <mxGeometry x="0.2025" y="28" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="310" as="sourcePoint" />
+            <mxPoint x="490" y="260" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-6" value="Http Response: 200&lt;div&gt;Usuario autenticado com sucesso&lt;/div&gt;&lt;div&gt;Token: 3h4kj5h3k45k3h45kjh34k5j3h4k&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1.021;entryY=0.11;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1UTrnUIsV_9sJApoUBW6-2" target="1UTrnUIsV_9sJApoUBW6-1">
+          <mxGeometry x="0.3106" y="25" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="200" as="sourcePoint" />
+            <mxPoint x="480" y="150" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-8" value="Http Request POST /contato&lt;div&gt;Token: 3h4kj5h3k45k3h45kjh34k5j3h4k&lt;br&gt;&lt;div&gt;nome: joao silva&lt;/div&gt;&lt;div&gt;email: joao@teste.com&lt;/div&gt;&lt;div&gt;telefone: (11) 1111-1111&lt;/div&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0.989;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.751;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="1UTrnUIsV_9sJApoUBW6-2">
+          <mxGeometry x="-0.422" y="47" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="270" as="sourcePoint" />
+            <mxPoint x="682" y="275" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-9" value="Http Response: 200&lt;div&gt;Contato Cadastrado com sucesso&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.829;exitDx=0;exitDy=0;entryX=1.021;entryY=0.11;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="1UTrnUIsV_9sJApoUBW6-2">
+          <mxGeometry x="0.0233" y="20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="284" as="sourcePoint" />
+            <mxPoint x="236" y="278" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1UTrnUIsV_9sJApoUBW6-13" value="Filtro" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;" vertex="1" parent="1">
+          <mxGeometry x="560" y="150" width="40" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
