@@ -1,0 +1,1 @@
+curl --request POST --header "Content-Type: application/json" --data "{\"id\": null, \"titulo\": \"Estudar\", \"descricao\": \"Apenas estudar\", \"inicio\": \"2025-09-11 10:00:00\", \"termino\":\"2025-09-11 12:00:00\", \"local\": \"Em casa\", \"tipo\": \"Desenvolvimento Pessoal\", \"contato\": 0}" http://localhost:8080/compromisso"

@@ -1,0 +1,67 @@
+plugins {
+	kotlin("jvm") version "1.9.25"
+	kotlin("plugin.spring") version "1.9.25"
+	id("org.springframework.boot") version "3.5.5"
+	id("io.spring.dependency-management") version "1.1.7"
+}
+
+group = "edu.curso"
+version = "0.0.1-SNAPSHOT"
+description = "Agenda de contato com Spring Boot e Kotlin"
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// Dependencia do JDBC e JPA
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+
+	// Dependencia de Validação
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+
+	// Dependencia do Swagger
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.12")
+
+	// JWT - Json Web Token
+	implementation("io.jsonwebtoken:jjwt-api:0.12.7")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.7")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.7")
+
+	// Dependencias do Security
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	testImplementation("org.springframework.security:spring-security-test")
+
+	// Dependencia do MQTT
+	implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+
+	// Dependencia da Serialização de JSON
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+kotlin {
+	compilerOptions {
+		freeCompilerArgs.addAll("-Xjsr305=strict")
+	}
+}
+
+tasks.withType<Test> {
+	useJUnitPlatform()
+}

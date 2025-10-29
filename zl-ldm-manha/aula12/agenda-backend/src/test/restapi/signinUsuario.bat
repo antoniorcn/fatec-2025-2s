@@ -1,0 +1,1 @@
+curl --request POST --header "Content-Type: application/json" --data "{\"email\": \"antonio@teste.com\", \"senha\": \"123456\"}" http://localhost:8080/auth/signin"
