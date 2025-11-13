@@ -10,4 +10,4 @@ echo Compilando arquivos
 javac -d ./build ./src/edu/curso/*.java
 
 echo Executando
-java --class-path .;.\build edu.curso.PrincipalView
+java --class-path .;.\lib\mariadb-java-client-3.5.6.jar;.\build edu.curso.TesteDB
