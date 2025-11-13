@@ -21,6 +21,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import javafx.util.converter.LocalDateStringConverter;
+import javafx.util.converter.NumberStringConverter;
 
 public class ContatoView implements Tela {
     private Label lblId = new Label("");
@@ -38,8 +39,13 @@ public class ContatoView implements Tela {
         BorderPane panPrincipal = new BorderPane();
         GridPane panCampos = new GridPane();
 
+        Button btnSalvar = new Button("Salvar");
+        Button btnPesquisar = new Button("Pesquisar");
+        Button btnNovo = new Button("Novo");
+
         panCampos.add(new Label("Id: "), 0, 0);
         panCampos.add( lblId, 1, 0);
+        panCampos.add( btnNovo, 2, 0);
         panCampos.add(new Label("Nome: "), 0, 1);
         panCampos.add( txtNome, 1, 1);
         panCampos.add(new Label("Email: "), 0, 2);
@@ -48,9 +54,6 @@ public class ContatoView implements Tela {
         panCampos.add( txtTelefone, 1, 3);
         panCampos.add(new Label("Nascimento: "), 0, 4);
         panCampos.add(dtaNascimento, 1, 4);
-
-        Button btnSalvar = new Button("Salvar");
-        Button btnPesquisar = new Button("Pesquisar");
 
         tableView.setItems( control.getLista() );
 
@@ -80,18 +83,25 @@ public class ContatoView implements Tela {
             public TableCell<Contato, Void> call(TableColumn<Contato, Void> param) {
                 return new TableCell<>(){ 
                     private Button btnApagar = new Button("Apagar");
+                    private Button btnEditar = new Button("Editar");
 
                     {
-                        btnApagar.setOnAction( e -> 
-                            new Alert(AlertType.INFORMATION, "Registro apagado")
-                            .showAndWait()
+                        btnApagar.setOnAction( e -> {
+                                control.apagar(getIndex());
+                                new Alert(AlertType.INFORMATION, "Registro apagado")
+                                .showAndWait();
+                            }
                         );
+
+                        btnEditar.setOnAction( e -> { 
+                            control.editar( getIndex() );
+                        });
                     }
 
                     @Override 
                     public void updateItem(Void item, boolean empty) {
                         if (!empty) { 
-                            setGraphic( btnApagar );
+                            setGraphic( new HBox(btnApagar, btnEditar) );
                         } else { 
                             setGraphic( null );
                         }
@@ -109,6 +119,8 @@ public class ContatoView implements Tela {
         tableView.getColumns().add(colNascimento);
         tableView.getColumns().add(colAcoes);
 
+        Bindings.bindBidirectional(lblId.textProperty(), control.idProperty(),
+            new NumberStringConverter());
         Bindings.bindBidirectional(txtNome.textProperty(), control.nomeProperty());
         Bindings.bindBidirectional(txtEmail.textProperty(), control.emailProperty());
         Bindings.bindBidirectional(txtTelefone.textProperty(), control.telefoneProperty());
@@ -120,6 +132,7 @@ public class ContatoView implements Tela {
                 new Alert(AlertType.INFORMATION, "Contato Salvo com sucesso")
                     .showAndWait();
                 control.limparTela();
+                tableView.refresh();
             }
         );
 
@@ -128,6 +141,8 @@ public class ContatoView implements Tela {
                 control.pesquisar();
             }
         );
+
+        btnNovo.setOnAction( e -> control.novoContato() );
 
         
 
