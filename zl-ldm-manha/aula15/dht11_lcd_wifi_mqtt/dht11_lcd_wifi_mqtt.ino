@@ -9,7 +9,7 @@
 
 const char* ssid = "BarberiniTaboao";
 const char* password = "26042021";
-const char* mqtt_server = "192.168.68.104";
+const char* mqtt_server = "192.168.68.107";
 const int mqtt_port = 1883;
 const char* mqtt_topic = "sensor/dht11";
 
@@ -27,10 +27,10 @@ void conectarWifi() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
-  Serial.print("IoT Temperatura e Umidade iniciando...");
+  Serial.println("IoT Temperatura e Umidade iniciando...");
   lcd.clear();
   lcd.setCursor(0, 0);
-  Serial.println("Wifi");
+  Serial.printf("Buscando Wifi %s ", ssid);
   lcd.print("Wifi: ");
   lcd.print(ssid);
   lcd.setCursor(0, 1);
@@ -45,6 +45,7 @@ void conectarWifi() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Connected");
+  Serial.println("Connected");
   delay(1000);
 
   // ( )  Não está conectado nem no Wifi
@@ -58,7 +59,7 @@ void setup() {
   lcd.backlight();
   conectarWifi();
   if (status_connection == 1) { 
-    mqttClient.setServer( mqtt_server, mqtt_port);
+    mqttClient.setServer( mqtt_server, mqtt_port );
   }
 }
 
@@ -66,7 +67,7 @@ void mqtt_connect() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Connecting MQTT");
-  Serial.println("Conectando MQTT");
+  Serial.print("Conectando MQTT ");
   lcd.setCursor(0, 1);
   while (!mqttClient.connected()) { 
     status_connection = 1;
@@ -77,6 +78,7 @@ void mqtt_connect() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("MQTT Connected");
+  Serial.println("\nConectado ao MQTT");
   status_connection = 2;
 }
 
@@ -109,10 +111,11 @@ void loop() {
     mqtt_connect();
   } else { 
     // "{\"temp\": 19.8, \"umd\": 42.5}"
+    tempC = 28.4;
+    umi = 63.0;
     if (!isnan(tempC) && !isnan(umi)) {
       String carga = "{\"temp\":" + String(tempC) + ", \"umd\":" + String(umi) + "}";
-      Serial.print("Enviando :");
-      Serial.println(carga.c_str());
+      Serial.printf("Enviando: %s \n", carga.c_str());
       mqttClient.publish(mqtt_topic, carga.c_str());
     }
     delay(10000);
