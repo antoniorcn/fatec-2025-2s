@@ -1,0 +1,29 @@
+-- Comandos do mysql
+-- Conectar no MYSQL
+--      mysql -u root -p
+-- 
+-- Mostrar Databases 
+--      show databases;
+--
+-- Criar database
+--      create database fzl_poo_tarde;
+--
+-- Usar o database
+--      use fzl-poo-tarde;
+--
+-- Mostrar as tabelas
+--      show tables;
+--
+-- Criar tabela no banco de dados atual
+--   create table contato ( 
+--           id int AUTO_INCREMENT NOT NULL,
+--         nome char(100) NOT NULL,
+--     telefone char(20),
+--        email char(30),
+--   nascimento date,
+--   PRIMARY KEY( id )
+--      );
+--
+--
+-- Mostrar a estrutura da tabela
+--      desc contato;
